@@ -30,18 +30,18 @@ int main(int argc, char *argv[])
 
     quantization.get_palette(palette);
     cv::namedWindow("Paleta", cv::WINDOW_AUTOSIZE);
-    cv::imshow("Paleta", palette);
+    cv::imshow("butterfly_palette", palette);
 
     quantization.reconstruction(image);
 
     cv::namedWindow("Color Quantization", cv::WINDOW_AUTOSIZE);
-    cv::imshow("Color Quantization", image);
+    cv::imshow("butterfly_out", image);
 
     cv::Mat original;
     original = cv::imread(file_name, CV_LOAD_IMAGE_COLOR);
 
     cv::namedWindow("Original", cv::WINDOW_AUTOSIZE);
-    cv::imshow("Original", original);
+    cv::imshow("butterfly", original);
 
     cv::waitKey(0);
 
